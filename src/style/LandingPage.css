@@ -1,0 +1,39 @@
+.myBG {
+  height: 100vh;
+  /* background: url(./assets/images/bg/main.jpg); */
+  background: tomato;
+}
+
+.intro {
+  height: 300px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+  text-shadow: 2px 2px black;
+  letter-spacing: 4px;
+}
+
+.movieList {
+  height: auto;
+  /* background: url(./assets/images/bg/main.jpg); */
+  background: orange;
+}
+
+.movieWrapper {
+}
+
+.movieCard {
+  height: auto;
+  margin: 10px;
+}
+
+.movieImage {
+  height: 400px;
+  background-color: black;
+}
