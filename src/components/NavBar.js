@@ -1,18 +1,35 @@
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Container, Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <div>
-      <Navbar variant="dark">
-        <Container>
-          <Navbar.Brand>Mofi</Navbar.Brand>
-          <Nav>
-            <Nav.Link>Trending</Nav.Link>
-            <Nav.Link>Superhero</Nav.Link>
+    <>
+      <Container>
+        <nav className="pt-2 navbar navbar-expand navbar-dark">
+          <a href="/" className="navbar-brand pe-3">
+            Mofii
+          </a>
+
+          <Nav className="navbar-nav">
+            <li className="nav-item">
+              <Link className="nav-link" to={"/"}>
+                Home
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to={"/movielist"}>
+                Movies
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to={"/favorite"}>
+                Your Favorite
+              </Link>
+            </li>
           </Nav>
-        </Container>
-      </Navbar>
-    </div>
+        </nav>
+      </Container>
+    </>
   );
 };
 

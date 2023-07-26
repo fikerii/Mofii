@@ -1,11 +1,7 @@
-import { getMovieList } from "../api";
-import { useEffect, useState } from "react";
 import { Container, Row, Col, Card, Image, Button } from "react-bootstrap";
 import { useAppContext } from "./AppContext";
 
-const MovieList = () => {
-  const [popularMovies, setPopularMovies] = useState([]);
-
+export const Favorite = () => {
   const { favorites, addToFavorites, removeFromFavorites } = useAppContext();
 
   console.log("favorites", favorites);
@@ -14,14 +10,9 @@ const MovieList = () => {
     const boolean = favorites.some((movie) => movie.id === id);
     return boolean;
   };
-  useEffect(() => {
-    getMovieList().then((result) => {
-      setPopularMovies(result);
-    });
-  }, []);
 
-  const PopularMovieList = () => {
-    return popularMovies.map((movie, i) => {
+  const FavoriteMovieList = () => {
+    return favorites.map((movie, i) => {
       return (
         <Col md={4} key={i} className="text-center pb-5">
           <Card className="movieCard">
@@ -43,22 +34,14 @@ const MovieList = () => {
       );
     });
   };
-
-  // const search = async (q) => {
-  //   const query = await searchMovie(q);
-  //   setPopularMovies(query.results);
-  // };
-
   return (
     <div>
       <Container className="container">
-        <h1 className="py-3 text-center text-white">Movies</h1>
+        <h1 className="py-3 text-center text-white">Your Favorite Movies</h1>
         <Row>
-          <PopularMovieList />
+          <FavoriteMovieList />
         </Row>
       </Container>
     </div>
   );
 };
-
-export default MovieList;

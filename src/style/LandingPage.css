@@ -1,11 +1,17 @@
 .myBG {
-  height: 100vh;
-  /* background: url(./assets/images/bg/main.jpg); */
-  background: tomato;
+  min-height: 100vh;
+  background: url(../img/introBG.jpg);
 }
-
+.nav-brand {
+  font-weight: 5px;
+  font-size: 30px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.nav-link {
+  text-decoration: none;
+}
 .intro {
-  height: 300px;
+  height: 50vh;
   display: flex;
   justify-content: end;
   align-items: end;
@@ -18,22 +24,22 @@
   text-shadow: 2px 2px black;
   letter-spacing: 4px;
 }
-
+/* 
 .movieList {
   height: auto;
-  /* background: url(./assets/images/bg/main.jpg); */
+  background: url(./assets/images/bg/main.jpg);
   background: orange;
-}
-
-.movieWrapper {
-}
-
+} */
 .movieCard {
-  height: auto;
-  margin: 10px;
+  margin: 1.5rem;
+}
+.movieInfo {
+  height: 5rem;
+  align-items: center;
 }
 
 .movieImage {
-  height: 400px;
+  width: auto;
+  object-fit: cover;
   background-color: black;
 }
